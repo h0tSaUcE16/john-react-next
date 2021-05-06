@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.PrivateTabIndicator-colorSecondary-3 {
+  background-color: seashell;
+}
