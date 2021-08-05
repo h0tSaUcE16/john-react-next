@@ -16,18 +16,18 @@ export default function HSR() {
       <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet"/> 
     </Head> 
     <TitleText 
-      fontFamily={`'Montserrat', serif`}
+      fontFamily={`'Bangers', serif`}
       color='#6699CC'
       placement={{
         top: 0,
         left: 0,
       }}
       size='8vw'
-      padding='0 5vw'
+      padding='2vh 10vw 0 10vw'
       text='Headshot'
     />
     <TitleText 
-      fontFamily={`'Montserrat', serif`}
+      fontFamily={`'Bangers', serif`}
       color='#FFFFFF'
       placement={{
         bottom: 0,
@@ -35,7 +35,7 @@ export default function HSR() {
       }}
       zIndex={1}
       size='8vw'
-      padding='0 7vw'
+      padding='0 14vw 2vh 14vw'
       text='Resume'
     />
     <ColorBlock
@@ -47,28 +47,32 @@ export default function HSR() {
         right: 0,
       }}
     />
-    <ImageOfficial 
-      source="/retouch2.jpg" 
-      alternate="John Cavaseno Cool Look" 
-      height='75vh'
-      width='35vw'
-      backgroundColor='#FFFFFF'
-      placement={{
-        top: '10vh',
-        left: '2vw',
-      }}
-    />
-    <ImageOfficial
-      source="/jcResume.png" 
-      alternate="John Cavaseno Cool Look" 
-      height='75vh'
-      width='35vw'
-      backgroundColor='#414A4C'
-      placement={{
-        bottom: '10vh',
-        right: '2vw',
-      }}
-    />
+    <a target='_blank' href='/retouch2.jpg'>
+      <ImageOfficial 
+        source="/retouch2.jpg" 
+        alternate="John Cavaseno Headshot" 
+        height='75vh'
+        width='35vw'
+        backgroundColor='#FFFFFF'
+        placement={{
+          top: '10vh',
+          left: '2vw',
+        }}
+      />
+    </a>
+    <a target='_blank' href='/jcResume.pdf'>
+      <ImageOfficial
+        source="/jcResume.png" 
+        alternate="John Cavaseno Resume" 
+        height='75vh'
+        width='35vw'
+        backgroundColor='#414A4C'
+        placement={{
+          bottom: '10vh',
+          right: '2vw',
+        }}
+      />
+    </a>
     </>
   )
 }

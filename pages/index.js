@@ -5,8 +5,11 @@ import IconButton from '@material-ui/core/IconButton'
 import ImageOfficial from '../components/ImageOfficial'
 import ColorBlock from '../components/ColorBlock'
 import TitleText from '../components/TitleText'
+import { Sling as Hamburger } from 'hamburger-react'
+import { useState } from 'react'
 
 export default function CoverPage() {
+  const [ drawerOpen, setDrawerOpen ] = useState(false)
 
   return (
     <>
@@ -18,6 +21,10 @@ export default function CoverPage() {
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
       {/* <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet"/>  */}
       {/* <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet"/> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap" rel="stylesheet"/> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"/> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/> */}
+      {/* <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"/> */}
       <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet"/>
     </Head> 
     <ImageOfficial 
@@ -45,18 +52,30 @@ export default function CoverPage() {
       size='9vw'
       text='John Cavaseno'
     />
+    
+    { drawerOpen ? (<ColorBlock
+          height='100vh'
+          width='60vw'
+          backgroundColor='#FFFFFF'
+          placement={{
+            top: 0,
+            right: 0,
+          }}
+        />) : null }
+
     <div style={{
       position: 'absolute',
-      bottom: 0,
+      top: 0,
       right: 0,
       zIndex: 1,
       margin: '1vh 1vw',
     }}>
-      <Link href='/home'>
+      {/* <Link href='/home'>
         <IconButton>
           <ArrowForwardIcon fontSize='large'/>
         </IconButton>
-      </Link>
+      </Link> */}
+      <Hamburger direction='left' toggled={drawerOpen} toggle={() => {setDrawerOpen(!drawerOpen)}}/>
     </div>
     </>
   )

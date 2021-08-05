@@ -4,7 +4,7 @@ export default function ImageOfficial(props) {
 
   return (
     <>
-    <img 
+      <img 
         src={props.source}
         alt={props.alternate} 
         style={{
@@ -19,7 +19,7 @@ export default function ImageOfficial(props) {
           position: 'absolute',
           ...props.placement,
         }}
-        />
+      />
     </>
   )
 }
