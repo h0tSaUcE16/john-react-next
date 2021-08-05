@@ -55,7 +55,7 @@ export default function CoverPage() {
     
     { drawerOpen ? (<ColorBlock
           height='100vh'
-          width='60vw'
+          width='50vw'
           backgroundColor='#FFFFFF'
           placement={{
             top: 0,
