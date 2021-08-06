@@ -1,0 +1,18 @@
+.nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: blue;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.nav a {
+    color: white;
+}
