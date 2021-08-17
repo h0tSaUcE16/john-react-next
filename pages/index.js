@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
-import IconButton from '@material-ui/core/IconButton'
 import ImageOfficial from '../components/ImageOfficial'
 import ColorBlock from '../components/ColorBlock'
 import TitleText from '../components/TitleText'
+import NavBar from "../components/NavBar"
 import { Sling as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
+import { ArrowForward } from '@material-ui/icons'
 
 export default function CoverPage() {
   const [ drawerOpen, setDrawerOpen ] = useState(false)
@@ -52,31 +52,74 @@ export default function CoverPage() {
       size='9vw'
       text='John Cavaseno'
     />
-    
-    { drawerOpen ? (<ColorBlock
-          height='100vh'
-          width='50vw'
-          backgroundColor='#FFFFFF'
-          placement={{
-            top: 0,
-            right: 0,
-          }}
-        />) : null }
 
-    <div style={{
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      zIndex: 1,
-      margin: '1vh 1vw',
-    }}>
-      {/* <Link href='/home'>
-        <IconButton>
-          <ArrowForwardIcon fontSize='large'/>
-        </IconButton>
-      </Link> */}
-      <Hamburger direction='left' toggled={drawerOpen} toggle={() => {setDrawerOpen(!drawerOpen)}}/>
-    </div>
+    {/* actor|dancer|singer color block and text */}
+    <ColorBlock 
+      height='8vh'
+      width='100vw'
+      // backgroundColor='#B31B1B' // maroonish
+      backgroundColor='#424242'
+      placement={{
+        right: 0,
+        bottom: '18vh',
+      }}
+    />
+    <TitleText
+      fontFamily={`'Cinzel', serif`}
+      color='#FFFFFF'
+      placement={{
+        right: '8vw',
+        bottom: '18vh',
+      }}
+      size='3vw'
+      text='Actor | Dancer | Singer'
+    />
+
+    {/* LEARN MORE color block and text */}
+    <ColorBlock 
+      height='5.5vh'
+      width='20vw'
+      // backgroundColor='#B31B1B' // maroonish
+      backgroundColor='#424242'
+      placement={{
+        right: 0,
+        bottom: '5vh',
+      }}
+    />
+    <Link href='/home'>
+      <a><TitleText
+        fontFamily={`'Cinzel', serif`}
+        color='#FFFFFF'
+        placement={{
+          right: '2vw',
+          bottom: '5vh',
+        }}
+        size='2.1vw'
+      >
+        Learn More <ArrowForward/>
+      </TitleText></a>
+    </Link>
+    
+    { drawerOpen ? (<NavBar />) : null}
+
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        zIndex: 100,
+        margin: '1vh 1vw',
+        backgroundColor: '#FFF',
+        // boxShadow: '1px 1px 1px 1px rgba(0, 0, 0, 0.2)',
+      }}>
+        <Hamburger 
+          direction='left' 
+          toggled={drawerOpen} 
+          toggle={() => { setDrawerOpen(!drawerOpen) }} 
+        />
+        </div>
+
     </>
   )
 }
+
+// transform ideas: tan from down, pic from left, name appear, then learn more from right

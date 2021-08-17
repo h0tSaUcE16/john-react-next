@@ -7,8 +7,8 @@ export default function NavBar () {
             className={styles.nav}
         >
             <Link href='/home'>Home</Link>
+            <Link href='/hsr'>Headshots & Resume</Link>
             <Link href='/gallery'>Gallery</Link>
-            <Link href='/hsr'>HSR</Link>
             <Link href='/reels'>Reels</Link>
             <Link href='/contact'>Contact</Link>
         </div>

@@ -13,35 +13,38 @@ export default function HSR() {
       <link rel="icon" type="image/gif/png" href="theater-icon-1.png" />
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
       {/* <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet"/> */}
-      <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet"/> 
-    </Head> 
+      {/* <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet"/>  */}
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet"/>
+</Head> 
     <TitleText 
-      fontFamily={`'Bangers', serif`}
-      color='#6699CC'
+      fontFamily={`'Cinzel', serif`}
+      // color='#6699CC'
+      color='#424242'
       placement={{
         top: 0,
         left: 0,
       }}
-      size='8vw'
-      padding='2vh 10vw 0 10vw'
+      size='7vw'
+      padding='2vh 6vw 0 6vw'
       text='Headshot'
     />
     <TitleText 
-      fontFamily={`'Bangers', serif`}
+      fontFamily={`'Cinzel', serif`}
       color='#FFFFFF'
       placement={{
         bottom: 0,
         right: 0,
       }}
       zIndex={1}
-      size='8vw'
-      padding='0 14vw 2vh 14vw'
+      size='7vw'
+      padding='0 11vw 2vh 11vw'
       text='Resume'
     />
     <ColorBlock
       height='100vh'
       width='50vw'
-      backgroundColor='#6699CC'
+      // backgroundColor='#6699CC'
+      backgroundColor='#424242'
       placement={{
         bottom: 0,
         right: 0,
@@ -53,7 +56,7 @@ export default function HSR() {
         alternate="John Cavaseno Headshot" 
         height='75vh'
         width='35vw'
-        backgroundColor='#FFFFFF'
+        backgroundColor='#DEB887'
         placement={{
           top: '10vh',
           left: '2vw',
@@ -66,13 +69,26 @@ export default function HSR() {
         alternate="John Cavaseno Resume" 
         height='75vh'
         width='35vw'
-        backgroundColor='#414A4C'
+        backgroundColor='#DEB887'
         placement={{
           bottom: '10vh',
           right: '2vw',
         }}
       />
     </a>
+
+    <TitleText 
+      fontFamily={`'Cinzel', serif`}
+      color='#DEB887'
+      placement={{
+        top: '34.8vh',
+        left: '34.8vw',
+      }}
+      zIndex={1}
+      size='12vw'
+      padding='0 11vw 2vh 11vw'
+      text='&'
+    />
     </>
   )
 }
